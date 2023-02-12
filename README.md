@@ -2,4 +2,4 @@
 
 Predicting the difficulty and rating of hiking trails using machine learning.
 
-Open trailGenie.ipynb for more.
+Open trailGenie.ipynb for more info.
