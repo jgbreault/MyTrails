@@ -1,5 +1,3 @@
-# TrailGenie
+Predicting the Difficulty and Enjoyment Rating of Hiking Trails
 
-Predicting the difficulty and rating of hiking trails using machine learning.
-
-Open trailGenie.ipynb for more info.
+Open TrailGenie.ipynb for more information.
