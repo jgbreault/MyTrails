@@ -13,5 +13,5 @@ Open TrailGenie.ipynb for more information.
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyCompletedTrails-GroupedbyMonth(Normalized).png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyCompletedTrails-CumulativeDistance.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-DistancesandElevationGains.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-DistancevsElevationGain.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-PredictionResults.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-DistancevsElevationGain.png)
