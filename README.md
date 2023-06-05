@@ -7,10 +7,10 @@ Open TrailGenie.ipynb for more information.
 Open images for more plots.
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/GPStoTopographicElevationGain.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyCompletedTrails-GroupedbyPark.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyCompletedTrails-WeatherSummary.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyCompletedTrails-GroupedbyDayofYear.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyCompletedTrails-CumulativeDistance.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-DistancesandElevationGains.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-PredictionResults.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/GPStoTopographicElevationGain.png)
