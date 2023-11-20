@@ -12,8 +12,7 @@ Summary of Steps:
 
 Summary of Results:
 
-Difficulty Model Score: ~0.70
-Rating Model Score: ~0.20
+Difficulty Model Score: ~0.70, Rating Model Score: ~0.20
 
 It turns out that a trail's length, elevation gain, climate, and physical features are enough to predict its difficulty with decent accuracy. Enjoyment is a different matter. Enjoyment is impacted greatly by season, weather, preparedness, and who you are hiking with, none of which is accounted for. It would be better to have a dataset of individual trail reviews with timestamps linked to users.
 
