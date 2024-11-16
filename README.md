@@ -8,7 +8,7 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 
 Trail difficulty can be predicted sufficiently well using a trail's length, elevation gain, climate, location, and physical features. Enjoyment, however, is a different matter. Enjoyment is impacted greatly by trail condition, campsite quality, amount of bugs, and much more that isn't accounted for. It would be better to have a dataset of trail reviews linked to individual users, as opposed to the values I use currently that are averaged over many users. This would be better for building models that can learn user preferences. Also, if I had timestamps and locations for each user review, I could use the weather API to determine the precise weather experienced on each hike.
 
-<font size="4">**Summary of Results:**</font>
+<font size="4">**Project Structure:**</font>
 ```
 MyTrails/
 ├── HistoricalWeatherFinder.ipynb # Uses an API to find climate data for base dataset and weather data for my trails
