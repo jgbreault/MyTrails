@@ -25,4 +25,4 @@ MyTrails/
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-WeatherSummary.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-GroupedbyDayofYear.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-CumulativeDistance.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-PredictionResults.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-PredictionResults.png)
