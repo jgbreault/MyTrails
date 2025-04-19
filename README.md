@@ -1,4 +1,4 @@
-# **Predicting the Difficulty and Enjoyment Rating of Backpacking Trails**
+# **Predicting the Difficulty and Enjoyment Rating of Hiking Trails Using Machine Learning**
 
 MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating of hiking trails. To train the machine learning models, a list of ~3000 trails in USA National Parks is used, from Alltrails.com. I include data from trails I've hiked myself as well, and I add a feature to keep track of which trails are mine to help fine-tune the model to my preferences. A historical weather API (Open-Meteo) is used to get climate data for each trail. I also use this project to visualize my personal backpacking statistics.
 
