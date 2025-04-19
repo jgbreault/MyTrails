@@ -10,23 +10,23 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
     - github.com/j-ane/trail-data/blob/master
     
 - Personal Trails
-    - Trails logged by me, friends, or family
+    - Trails logged by me, friends, and family
     - N = ~100
 ```
 
 <font size="4">**Model Features:**</font>
 ```
-# MOVEMENT
+##### MOVEMENT #####
 - Distance (km)
 - Elevation Gain (m)
 
-# LOCATION
+##### LOCATION #####
 - Country
 - Province (or state)
 - Region
 - Park
 
-# TRAIL FEATURES
+##### PHYSICAL FEATURES #####
 - Forest
 - Lake
 - River
@@ -36,13 +36,13 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 - Cave
 - Hot Spring
 
-# CLIMATE
+##### CLIMATE #####
 - Summer Temperature (98th percentile of daily max temps, °C)
 - Winter Temperature (2nd percentile of daily max temps, °C)
 - Annual Rain (mm)
 - Annual Snow (cm)
 
-# MISCELLANEOUS
+##### MISCELLANEOUS #####
 - Route Type ('loop', 'out and back', or 'point to point')
 - Backpacking (whether the trail is known for overnight camping)
 - Number of Reviews (1 for personal trails, often >1 for USA trails)
@@ -60,7 +60,7 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 - Difficulty Model Score: 0.65 to 0.75
 - Rating Model Score: 0.2 to 0.3
 
-Trail difficulty can be predicted sufficiently well using a trail's length, elevation gain, climate, location, and physical features. Enjoyment, however, is a different matter. Enjoyment is impacted greatly by trail condition, campsite quality, amount of bugs, hiking companions, weather, and much more that isn't accounted for. It would be better to have a dataset of trail ratings linked to individual users, as opposed to the current USA trail ratings that are averaged over many users. This would further help the models adapt to user preferences. If I had timestamps and locations for each individual review, I could use the weather API to collect the weather on each hike.
+Trail difficulty can be predicted sufficiently well using a trail's length, elevation gain, climate, location, and physical features. Enjoyment, however, is a different matter. Enjoyment is impacted greatly by trail condition, campsite quality, amount of bugs, hiking companions, weather, and much more that isn't accounted for. It would be better to have more trail ratings linked to individual users, as opposed to the current USA National Park trail ratings that are averaged over many users. This would further help the models adapt to user preferences. If I had a large dataset of individual trail reviews with timestamps and locations, I could use a weather API to collect the specfic weather on each hike.
 
 <font size="4">**Project Structure:**</font>
 ```
