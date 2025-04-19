@@ -1,6 +1,60 @@
 # **Predicting the Difficulty and Enjoyment Rating of Hiking Trails Using Machine Learning**
 
-MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating of hiking trails. To train the machine learning models, a list of ~3000 trails in USA National Parks is used, from Alltrails.com. I include data from trails I've hiked myself as well, and I add a feature to keep track of which trails are mine to help fine-tune the model to my preferences. A historical weather API (Open-Meteo) is used to get climate data for each trail. I also use this project to visualize my personal backpacking statistics.
+MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating of hiking trails. To train the machine learning models, a list of ~3000 trails in USA National Parks is used, from AllTrails.com. I include data from trails I have hiked myself as well, and I add a feature to keep track of which trails are mine to help fine-tune the model to my preferences. Another feature is added to keep track the source of the distance and elevation gain data. Elevation gain in particular varies greatly between GPS and topographic sources. A historical weather API (Open-Meteo) is used to collect climate data for each trail. I also use this project to visualize my personal backpacking statistics.
+
+<font size="4">**Data Sources:**</font>
+```
+- USA National Parks
+    - Trails from AllTrails using an API that is now deprecated 
+    - N = 3015 (3313 before filters)
+    - github.com/j-ane/trail-data/blob/master
+    
+- Personal Trails
+    - Trails logged by me, friends, or family
+    - N = ~100
+```
+
+<font size="4">**Model Features:**</font>
+```
+# MOVEMENT
+- Distance (km)
+- Elevation Gain (m)
+
+# LOCATION
+- Country
+- Province (or state)
+- Region
+- Park
+
+# TRAIL FEATURES
+- Forest
+- Lake
+- River
+- Waterfall
+- Beach
+- Historic Site
+- Cave
+- Hot Spring
+
+# CLIMATE
+- Summer Temperature (98th percentile of daily max temps, °C)
+- Winter Temperature (2nd percentile of daily max temps, °C)
+- Annual Rain (mm)
+- Annual Snow (cm)
+
+# MISCELLANEOUS
+- Route Type ('loop', 'out and back', or 'point to point')
+- Backpacking (whether the trail is known for overnight camping)
+- Number of Reviews (1 for personal trails, often >1 for USA trails)
+- Route Source (source of the Distance and Elevation Gain)
+- User (person providing the Difficulty and Enjoyment Rating)
+```
+
+<font size="4">**Model Targets:**</font>
+```
+- Difficulty (1-7 scale)
+- Enjoyment Rating (1-5 scale)
+```
 
 <font size="4">**Summary of Results:**</font>
 - Difficulty Model Score: 0.65 to 0.75
