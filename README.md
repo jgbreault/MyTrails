@@ -38,7 +38,7 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 
 ##### CLIMATE #####
 - Summer Temperature (98th percentile of daily max temps, °C)
-- Winter Temperature (2nd percentile of daily max temps, °C)
+- Winter Temperature (2nd percentile of daily min temps, °C)
 - Annual Rain (mm)
 - Annual Snow (cm)
 
