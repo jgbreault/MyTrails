@@ -1,0 +1,5 @@
+# Ignore general hidden files
+.* 
+
+# Except
+!.gitignore
