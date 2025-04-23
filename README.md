@@ -74,7 +74,6 @@ MyTrails/
 ```
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-80%25DensityContoursbyDifficulty.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-DistancevsElevationGain(perDay).png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-GroupedbyPark.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-WeatherSummary.png)
