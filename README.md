@@ -6,7 +6,7 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 
 <font size="4">**Summary of Results:**</font>
 - Difficulty Model Score: 0.65 to 0.75
-- Rating Model Score: 0.2 to 0.3
+- Rating Model Score: 0.20 to 0.3
 
 Trail difficulty can be predicted sufficiently well using a trail's length, elevation gain, climate, location, and physical features. Enjoyment, however, is a different matter. Enjoyment is impacted greatly by trail condition, campsite quality, amount of bugs, hiking companions, weather, and much more that isn't accounted for. It would be better to have more trail ratings linked to individual users, as opposed to the current USA National Park trail ratings that are averaged over many users. This would further help the models adapt to user preferences. If I had a large dataset of individual trail reviews with timestamps and locations, I could use a weather API to collect the specfic weather on each hike.
 
@@ -16,7 +16,7 @@ Trail difficulty can be predicted sufficiently well using a trail's length, elev
 ```
 - USA National Parks
     - Trails from AllTrails using an API that is now deprecated 
-    - N = 3015 (3313 before filters)
+    - N = 3021 (3313 before filters)
     - github.com/j-ane/trail-data/blob/master
     
 - Personal Trails
