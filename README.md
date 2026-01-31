@@ -1,22 +1,10 @@
 # **Predicting the Difficulty and Enjoyment of Hiking Trails using Machine Learning**
 
-MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating of hiking trails. A list of over 3000 trails from USA National Parks is used to train the machine learning models, from AllTrails. I also include data from trails I have hiked myself, and I add a feature to distinguish them, to help fine-tune the models to my preferences. Other features include distance, elevation gain, park, seen geographical features, and much more. A historical weather API ([https://open-meteo.com/en/docs/historical-weather-api](Open-Meteo)) is used to collect climate data for each trail. I also use this project to visualize my personal backpacking statistics.
+MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating of hiking trails. [A list of over 3000 trails from USA National Parks](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv) is used to train the machine learning models, from AllTrails. I also include data from trails I have hiked myself, and I add a feature to distinguish them, to help fine-tune the models to my preferences. Other features include distance, elevation gain, park, seen geographical features, and much more. A historical weather API ([Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api)) is used to collect climate data for each trail, improving accuracy. I also use this project to visualize my personal backpacking statistics.
 
 <font size="4">**Summary of Results:**</font>
 - Difficulty Model Score: 0.70 - 0.75
 - Rating Model Score: 0.80 - 0.85
-
-<font size="4">**Data Sources:**</font>
-```
-- USA National Parks
-    - Trails from AllTrails using an API that is now deprecated 
-    - N = 3313
-    - github.com/j-ane/trail-data/blob/master
-    
-- Personal Trails
-    - Trails logged by me, friends, and family
-    - N < 100
-```
 
 <font size="4">**Model Targets:**</font>
 ```
