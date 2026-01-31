@@ -1,12 +1,16 @@
 # **MyTrails: Backpacking AI & Personal Analytics**
 
-MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. By combining a dataset of over 3,000 USA National Park trails with data from trails I have hiked myself, machine learning can be built that are fine-tuned to my preferences. The project uses Scikit-Learn to train models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.). To improve accuracy, I integrated the Open-Meteo API to collect historical weather data for each trail, ensuring the models account for local climate. I also use this project to visualize my personal backpacking statistics and explore trends in my hiking history.
+MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. By combining a dataset of over 3,000 USA National Park trails with data from trails I have hiked myself, machine learning models can be built that are fine-tuned to my preferences. The project uses Scikit-Learn to train models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.). To improve accuracy, I integrated the Open-Meteo API to collect historical weather data for each trail, ensuring the models account for local climate. I also use this project to visualize my personal backpacking statistics and explore trends in my hiking history.
 
 ## Key Features
 
-* **Personal Data Integration:** Merged personal hiking data with over 3,000 records from AllTrails. Added a feature to distinguish my records and fine-tune the models to my personal preferences.
-* **Climate Intelligence:** Integrated the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) to enrich the dataset with climate data, improving model performance.
-* **Data Visualization:** Generated detailed visualizations to explore dataset trends and personal statistics.
+* **Personal Data:** Merged personal hiking data with over 3,000 records from AllTrails. Added a feature to distinguish my records and fine-tune the models to my personal preferences.
+* **Climate Data:** Integrated the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) to enrich the dataset with climate data, improving model performance.
+* **Clean Data:** Checked for multicollinearity using VIF (Variance Inflation Factor). Handled high-cardinality categorical data. Checked for null values.
+* **Model Comparisons:** Nine regressors are compared to find the best for both difficulty and enjoyment.
+* **Feature Selection:** Implemented Recursive Feature Elimination; the feature that improves test MSE most upon removal is iteratively removed until no further removals reduce test MSE.
+* **Hyperparameter Tuning:** 5-fold cross-validation is used to tune hyperparameters via Grid Search.
+* **Visualization:** Generated detailed visualizations to explore dataset trends and personal statistics.
 
 ## Tech Stack
 
@@ -19,15 +23,14 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hikin
 
 ## Data Sources
 
-* [AllTrails Dataset](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv): 3,000+ USA National Park trails.
-* **Personal Logs:** Individual backpacking and hiking history.
+* [USA National Park trails](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv).
+* Personal hiking logs.
 
 ## **Plots - Full Dataset**
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetTrailCountsbyDifficultyandEnjoyment.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetCorrelationHeatmap.png)
-
 
 ## **Plots - My Trails**
 
@@ -39,20 +42,21 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hikin
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsDayCountsbyMonthandDayofWeek.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsCorrelationHeatmap.png)
 
-
 ## **Plots - Prediction Results**
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoyment.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-DistancevsElevationGainwithDifficultyandEnjoymentPredictions.png)
 
-## **Summary of Results:**
+## **Summary of Results**
+After comparing nine regressors, Gradient Boosting Regressor performed best for predicting difficulty, and Support Vector Regression (SVR) was best for enjoyment.
+
 - Difficulty Model Score: 0.70 - 0.75
-- Rating Model Score: 0.80 - 0.85
+- Enjoyment Model Score: 0.80 - 0.85
 
 ## **Model Targets:**
 ```
 - Difficulty (1-7 scale)
-- Enjoyment Rating (1-5 scale)
+- Enjoyment (1-5 scale)
 ```
 
 ## **Model Features:**
