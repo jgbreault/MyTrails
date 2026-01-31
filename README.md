@@ -1,13 +1,14 @@
 # **MyTrails: Backpacking AI & Personal Analytics**
 
-MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. By combining a dataset of over 3,000 USA National Park trails with data from trails I have hiked myself, machine learning models can be built that are fine-tuned to my preferences. The project uses Scikit-Learn to train models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.). To improve accuracy, I integrated the Open-Meteo API to collect historical weather data for each trail, ensuring the models account for local climate. I also use this project to visualize my personal backpacking statistics and explore trends in my hiking history.
+MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. The project uses Scikit-Learn to train machine learning models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.).
 
 ## Key Features
 
 * **Personal Data:** Merged personal hiking data with over 3,000 records from [USA National Parks](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv). Added a feature to distinguish my records and fine-tune the models to my personal preferences.
 * **Climate Data:** Integrated the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) to enrich the dataset with climate data, improving model performance.
 * **Clean Data:** Checked for multicollinearity using VIF. Handled high-cardinality categorical data. Checked for null values.
-* **Model Comparisons:** Nine regressors are compared to find the best for difficulty and enjoyment.
+* **Stratified Splitting:** Data splits were stratified on the target variable, ensuring representative datasets.
+* **Model Selection:** Nine regressors are compared to find the best for difficulty and enjoyment.
 * **Feature Selection:** Implemented recursive feature elimination; the feature that improves test MSE most upon removal is iteratively removed until no further removals reduce test MSE.
 * **Hyperparameter Tuning:** 5-fold cross-validation is used to tune hyperparameters.
 * **Visualization:** Generated detailed visualizations to explore dataset trends and personal statistics.
