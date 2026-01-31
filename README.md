@@ -64,7 +64,7 @@ MyTrails/
 ├── dataSources/
 │   ├── alltrails-climate.csv # Climate data for USA National Park trails
 │   ├── alltrails-data.csv    # Other data for USA National Park trails
-│   └── MyTrails.csv          # Data of personal completed hikes
+│   ├── MyTrails.csv          # Data of personal completed hikes
 │   └── Shortlist.csv         # Data of personal trails of interest
 └── images/                   # Misc generated plots
 ```
