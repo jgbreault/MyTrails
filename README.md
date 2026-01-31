@@ -1,18 +1,61 @@
-# **Predicting the Difficulty and Enjoyment of Hiking Trails using Machine Learning**
+# **MyTrails: Backpacking AI & Personal Analytics**
 
-MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating of hiking trails. [A list of over 3000 trails from USA National Parks](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv) is used to train the machine learning models, from AllTrails. I also include data from trails I have hiked myself, and I add a feature to distinguish them, to help fine-tune the models to my preferences. Other features include distance, elevation gain, park, seen geographical features, and much more. A historical weather API ([Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api)) is used to collect climate data for each trail, improving accuracy. I also use this project to visualize my personal backpacking statistics.
+MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. By combining a dataset of over 3,000 USA National Park trails with data from trails I have hiked myself, machine learning can be built that are fine-tuned to my preferences. The project uses Scikit-Learn to train models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.). To improve accuracy, I integrated the Open-Meteo API to collect historical weather data for each trail, ensuring the models account for local climate. I also use this project to visualize my personal backpacking statistics and explore trends in my hiking history.
 
-<font size="4">**Summary of Results:**</font>
+## Key Features
+
+* **Personal Data Integration:** Merged personal hiking data with over 3,000 records from AllTrails. Added a feature to distinguish my records and fine-tune the models to my personal preferences.
+* **Climate Intelligence:** Integrated the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) to enrich the dataset with climate data, improving model performance.
+* **Data Visualization:** Generated detailed visualizations to explore dataset trends and personal statistics.
+
+## Tech Stack
+
+* **Language:** Python
+* **Environment:** Jupyter Notebook
+* **Machine Learning:** Scikit-Learn
+* **Data Analysis:** Pandas, NumPy
+* **Visualization:** Matplotlib, Seaborn, Plotly
+* **API:** Open-Meteo (Historical Weather & Climate Data)
+
+## Data Sources
+
+* [AllTrails Dataset](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv): 3,000+ USA National Park trails.
+* **Personal Logs:** Individual backpacking and hiking history.
+
+## **Plots - Full Dataset**
+
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetTrailCountsbyDifficultyandEnjoyment.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetCorrelationHeatmap.png)
+
+
+## **Plots - My Trails**
+
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-DistancevsElevationGain.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-GroupedbyPark.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WeatherSummaryPlot.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-CumulativeDistance.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailDensityByDay.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsDayCountsbyMonthandDayofWeek.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsCorrelationHeatmap.png)
+
+
+## **Plots - Prediction Results**
+
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoyment.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-DistancevsElevationGainwithDifficultyandEnjoymentPredictions.png)
+
+## **Summary of Results:**
 - Difficulty Model Score: 0.70 - 0.75
 - Rating Model Score: 0.80 - 0.85
 
-<font size="4">**Model Targets:**</font>
+## **Model Targets:**
 ```
 - Difficulty (1-7 scale)
 - Enjoyment Rating (1-5 scale)
 ```
 
-<font size="4">**Model Features:**</font>
+## **Model Features:**
 ```
 ##### MOVEMENT #####
 - Distance (km)
@@ -45,7 +88,7 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 - User (person providing the Difficulty and Enjoyment Rating)
 ```
 
-<font size="4">**Project Structure:**</font>
+## Project Structure
 ```
 MyTrails/
 ├── MyTrails.ipnyb            # Analyse trail data and build the models
@@ -56,27 +99,3 @@ MyTrails/
 │   └── Shortlist.csv         # Data of personal trails of interest
 └── images/                   # Misc generated plots
 ```
-
-## **Plots - Full Dataset**
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetTrailCountsbyDifficultyandEnjoyment.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetCorrelationHeatmap.png)
-
-
-## **Plots - My Trails**
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-GroupedbyPark.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WeatherSummaryPlot.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-CumulativeDistance.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailDensityByDay.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsDayCountsbyMonthandDayofWeek.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsCorrelationHeatmap.png)
-
-
-## **Plots - Prediction Results**
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoyment.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-DistancevsElevationGainwithDifficultyandEnjoymentPredictions.png)
-
