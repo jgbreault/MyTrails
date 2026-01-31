@@ -6,9 +6,6 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment rating o
 - Difficulty Model Score: 0.70 - 0.75
 - Rating Model Score: 0.80 - 0.85
 
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WatchlistTrails-PredictionResults.png)
-
 <font size="4">**Data Sources:**</font>
 ```
 - USA National Parks
@@ -75,8 +72,8 @@ MyTrails/
 ## **Plots - Full Dataset**
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset/?TrailCountsbyDifficultyandEnjoyment.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset?CorrelationHeatmap.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetTrailCountsbyDifficultyandEnjoyment.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetCorrelationHeatmap.png)
 
 
 ## **Plots - My Trails**
@@ -86,12 +83,12 @@ MyTrails/
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WeatherSummaryPlot.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-CumulativeDistance.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailDensityByDay.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails/?DayCountsbyMonthandDayofWeek.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails?CorrelationHeatmap.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsDayCountsbyMonthandDayofWeek.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsCorrelationHeatmap.png)
 
 
 ## **Plots - Prediction Results**
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoyment.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoyment?withDifficultyandEnjoymentPredictions.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoymentwithDifficultyandEnjoymentPredictions.png)
 
