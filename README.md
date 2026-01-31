@@ -24,8 +24,8 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hikin
 
 After comparing nine regressors, Gradient Boosting Regressor performed best for predicting difficulty and Support Vector Regression (SVR) performed best for predicting enjoyment.
 
-- Difficulty Model Score: 0.70 - 0.75
-- Enjoyment Model Score: 0.80 - 0.85
+- Difficulty Model Accuracy: 0.70 - 0.75
+- Enjoyment Model Accuracy: 0.80 - 0.85
 
 ## **Plots - Full Dataset**
 
