@@ -2,11 +2,9 @@
 
 MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. The project uses Scikit-Learn to train machine learning models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.).
 
-## Key Features
-
 * **Personal Data:** Merged personal hiking data with over 3,000 records from [USA National Parks](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv). Added a feature to distinguish my records and fine-tune the models to my personal preferences.
 * **Climate Data:** Integrated the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) to enrich the dataset with climate data, improving model performance.
-* **Clean Data:** Checked for multicollinearity using VIF. Handled high-cardinality categorical data. Checked for null values.
+* **Clean Data:** Checked for multicollinearity using VIF. Handled high-cardinality categorical encoding. Checked for null values. Standardize continous features.
 * **Stratified Splitting:** Data splits were stratified on the target variable, ensuring representative datasets.
 * **Model Selection:** Nine regressors are compared to find the best for difficulty and enjoyment.
 * **Feature Selection:** Implemented recursive feature elimination; the feature that improves test MSE most upon removal is iteratively removed until no further removals reduce test MSE.
@@ -24,7 +22,7 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hikin
   
 ## **Summary of Results**
 
-After comparing nine regressors, Gradient Boosting Regressor performed best for predicting difficulty, and Support Vector Regression (SVR) performed best for enjoyment.
+After comparing nine regressors, Gradient Boosting Regressor performed best for predicting difficulty and Support Vector Regression (SVR) performed best for predicting enjoyment.
 
 - Difficulty Model Score: 0.70 - 0.75
 - Enjoyment Model Score: 0.80 - 0.85
