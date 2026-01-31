@@ -75,19 +75,19 @@ MyTrails/
 ## **Plots - Full Dataset**
 
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset?TrailCountsbyDifficultyandEnjoyment.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset/?TrailCountsbyDifficultyandEnjoyment.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset?CorrelationHeatmap.png)
 
 
 ## **Plots - My Trails**
 
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-DistancevsElevationGain(perDay).png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails?DayCountsbyMonthandDayofWeek.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-DistancevsElevationGain.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-GroupedbyPark.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WeatherSummaryPlot.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailDensityByDay.png)
 ![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-CumulativeDistance.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailDensityByDay.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails/?DayCountsbyMonthandDayofWeek.png)
+![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails?CorrelationHeatmap.png)
 
 
 ## **Plots - Prediction Results**
