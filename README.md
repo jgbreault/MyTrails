@@ -7,7 +7,6 @@ MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hikin
 * **Clean Data:** Checked for multicollinearity using VIF. Handled high-cardinality categorical encoding. Checked for null values. Standardize continuous features.
 * **Stratified Splitting:** Data splits were stratified on the target variable, ensuring representative datasets.
 * **Model Selection:** Nine regressors are compared to find the best for difficulty and enjoyment.
-* **Feature Selection:** Implemented recursive feature elimination; the feature that improves test MSE most upon removal is iteratively removed until no further removals reduce test MSE.
 * **Hyperparameter Tuning:** 5-fold cross-validation is used to tune hyperparameters.
 * **Visualization:** Generated detailed visualizations to explore dataset trends and personal statistics.
 
