@@ -2,6 +2,14 @@
 
 MyTrails is a project exploring my personal backpacking statistics, featuring a supervised learning experiment to test whether a trail's distance and elevation gain are good predictors of its difficulty and enjoyment.
 
+## Data
+
+- **`data/MyTrails.csv`**
+    - My 58 completed backpacking trails
+- **`data/alltrails-data.csv`**
+    - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
+    - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
+
 ## Plots
 
 ![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
@@ -12,14 +20,6 @@ MyTrails is a project exploring my personal backpacking statistics, featuring a 
 ![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
 ![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-TrailCountsbyDifficultyandEnjoyment.png)
 ![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistancewithEstimatedDifficulty.png)
-
-## Data
-
-- **`data/MyTrails.csv`**
-    - My 58 completed backpacking trails
-- **`data/alltrails-data.csv`**
-    - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
-    - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
 
 ## Machine Learning
 
