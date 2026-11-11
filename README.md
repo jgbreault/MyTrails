@@ -1,6 +1,6 @@
 # MyTrails
 
-MyTrails is a project exploring my personal backpacking statistics, with a supervised learning experiment to test whether a trail's distance and elevation gain are good predictors of its difficulty and enjoyment.
+MyTrails is a project exploring my personal backpacking statistics, featuring a supervised learning experiment to test whether a trail's distance and elevation gain are good predictors of its difficulty and enjoyment.
 
 ## Plots
 
