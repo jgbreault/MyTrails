@@ -2,26 +2,17 @@
 
 MyTrails is a project exploring my personal backpacking statistics, with a supervised-learning experiment testing if a trail's distance and elevation gain are good predictors of its difficulty and how enjoyable it is.
 
-## Data
+## Plots
 
-- **`data/MyTrails.csv`** — my 58 completed backpacking trails:
-    - trail name
-    - distance
-    - elevation gain
-    - park
-    - province
-    - country
-    - start date
-    - end date
-- **`data/alltrails-data.csv`** — all 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails:
-    - trail name
-    - distance
-    - elevation gain
-    - difficulty (1-7 scale)
-    - enjoyment (1-5 scale)
-    - activities
-        - Used to get subsets of 3,001 hiking trails and 808 backpacking trails
-        - The backpacking subset is used for training since I only estimate the difficulty and enjoyment of backpacking trails
+![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
+![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
+![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
+![Day counts by day of week and month](images/MyBackpackingTrails-GroupedbyDayofWeekandMonth.png)
+![Trail density by day of year](images/TrailDensityByDay.png)
+![Correlation heatmap](images/USABackpackingTrails-CorrelationHeatmap.png)
+![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
+![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
+![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyPredictedDifficulty.png)
 
 ## Machine Learning
 
@@ -72,6 +63,27 @@ For both difficulty and enjoyment, the same procedure is run:
 
    The candidate with the lowest cross-validated RMSE is selected and used to get the final test RMSE and R².
 
+## Data
+
+- **`data/MyTrails.csv`** — my 58 completed backpacking trails:
+    - trail name
+    - distance
+    - elevation gain
+    - park
+    - province
+    - country
+    - start date
+    - end date
+- **`data/alltrails-data.csv`** — all 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails:
+    - trail name
+    - distance
+    - elevation gain
+    - difficulty (1-7 scale)
+    - enjoyment (1-5 scale)
+    - activities
+        - Used to get subsets of 3,001 hiking trails and 808 backpacking trails
+        - The backpacking subset is used for training since I only estimate the difficulty and enjoyment of backpacking trails
+
 ## Results
 
 ### Difficulty
@@ -107,26 +119,6 @@ For both difficulty and enjoyment, the same procedure is run:
 **Feature Importance:** Distance: 0.35, Elevation Gain: 0.65
 
 **Verdict:** Distance and elevation gain are terrible predictors of how enjoyable a trail is.
-
-## Plots
-
-**My trails**
-
-![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
-![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
-![Distance grouped by park](images/MyBackpackingTrails-GroupedbyPark.png)
-![Day counts by day of week and month](images/MyBackpackingTrails-GroupedbyDayofWeekandMonth.png)
-![Trail density by day of year](images/TrailDensityByDay.png)
-
-**USA backpacking trails**
-
-![Correlation heatmap](images/USABackpackingTrails-CorrelationHeatmap.png)
-![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
-![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
-
-**Predictions on my trails**
-
-![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyPredictedDifficulty.png)
 
 ## Project Structure
 
