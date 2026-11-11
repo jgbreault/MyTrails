@@ -11,7 +11,7 @@ MyTrails is a project exploring my personal backpacking statistics, with a super
 ![Trail density by day of year](images/TrailDensityByDay.png)
 ![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
 ![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
-![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyEstimatedDifficulty.png)
+![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistancewithEstimatedDifficulty.png)
 
 ## Data
 
