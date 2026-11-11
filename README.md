@@ -92,7 +92,7 @@ For both difficulty and enjoyment, the same procedure is run:
 | CV RMSE | 0.501 | 0.496 | 0.491 | 0.491 |
 | Train R² | 0.000 | 0.036 | 0.138 | 0.118 |
 
-**Best Model:** Random Forest (test RMSE: 0.550, test R²: -0.056)
+**Best Model:** Random Forest (Test RMSE: 0.550, Test R²: -0.056)
 
 **Feature Importance:** Difficulty: 0.35, Enjoyment: 0.65 
 
