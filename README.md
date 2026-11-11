@@ -1,99 +1,139 @@
-# **MyTrails: Backpacking AI & Personal Analytics**
+# MyTrails
 
-MyTrails is a backpacking AI that predicts the difficulty and enjoyment of hiking trails. The project uses Scikit-Learn to train machine learning models on features like distance, elevation gain, park, and geographical features (caves, waterfalls, etc.).
+MyTrails is a project exploring my personal backpacking statistics, with a supervised-learning experiment testing if a trail's distance and elevation gain are good predictors of its difficulty and how enjoyable it is.
 
-* **Personal Data:** Merged personal hiking data with over 3,000 records from [USA National Parks](https://github.com/j-ane/trail-data/blob/master/alltrails-data.csv). Added a feature to distinguish my records and fine-tune the models to my personal preferences.
-* **Climate Data:** Integrated the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api) to enrich the dataset with climate data, improving model performance.
-* **Clean Data:** Checked for multicollinearity using VIF. Handled high-cardinality categorical encoding. Checked for null values. Standardize continuous features.
-* **Stratified Splitting:** Data splits were stratified on the target variable, ensuring representative datasets.
-* **Model Selection:** Nine regressors are compared to find the best for difficulty and enjoyment.
-* **Hyperparameter Tuning:** 5-fold cross-validation is used to tune hyperparameters.
-* **Visualization:** Generated detailed visualizations to explore dataset trends and personal statistics.
+## Data
 
-## Tech Stack
+- **`data/MyTrails.csv`** — my 58 completed backpacking trails:
+    - trail name
+    - distance
+    - elevation gain
+    - park
+    - province
+    - country
+    - start date
+    - end date
+- **`data/alltrails-data.csv`** — all 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails:
+    - trail name
+    - distance
+    - elevation gain
+    - difficulty (1-7 scale)
+    - enjoyment (1-5 scale)
+    - activities
+        - Used to get subsets of 3,001 hiking trails and 808 backpacking trails
+        - The backpacking subset is used for training since I only estimate the difficulty and enjoyment of backpacking trails
 
-* **Language:** Python
-* **Environment:** Jupyter Notebook
-* **Machine Learning:** Scikit-Learn
-* **Data Analysis:** Pandas, NumPy
-* **Visualization:** Matplotlib, Seaborn, Plotly
-* **API:** Open-Meteo (Historical Weather & Climate Data)
-  
-## **Summary of Results**
+## Machine Learning
 
-After comparing nine regressors, Gradient Boosting Regressor performed best for predicting difficulty and Support Vector Regression (SVR) performed best for predicting enjoyment.
-
-- Difficulty Model Accuracy: 0.70 - 0.75
-- Enjoyment Model Accuracy: 0.80 - 0.85
-
-## **Plots - Full Dataset**
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDataset-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetTrailCountsbyDifficultyandEnjoyment.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/FullDatasetCorrelationHeatmap.png)
-
-## **Plots - My Personal Trails**
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-DistancevsElevationGain.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-GroupedbyPark.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/WeatherSummaryPlot.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrails-CumulativeDistance.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailDensityByDay.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsDayCountsbyMonthandDayofWeek.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/MyBackpackingTrailsCorrelationHeatmap.png)
-
-## **Plots - Prediction Results**
-
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-PredictedDifficultyvsEnjoyment.png)
-![Image](https://github.com/jgbreault/TrailGenie/blob/main/images/TrailsofInterest-DistancevsElevationGainwithDifficultyandEnjoymentPredictions.png)
-
-## **Model Targets:**
-```
-- Difficulty (1-7 scale)
-- Enjoyment (1-5 scale)
-```
-
-## **Model Features:**
-```
-##### MOVEMENT #####
+**Features:**
 - Distance (km)
 - Elevation Gain (m)
 
-##### LOCATION #####
-- Country
-- Province (or state)
-- Park
+**Targets:**
+- Difficulty (1-7 scale)
+- Enjoyment (1-5 scale)
 
-##### PHYSICAL FEATURES #####
-- Forest
-- Lake
-- River
-- Waterfall
-- Beach
-- Historic Site
-- Cave
-- Hot Spring
+Multicollinearity is considered. Distance and elevation gain have a correlation of 0.87 and a VIF of 3.99, comfortably under the standard threshold of 5–10.
 
-##### CLIMATE #####
-- Summer Temperature (98th percentile of daily max temps, °C)
-- Winter Temperature (2nd percentile of daily min temps, °C)
-- Annual Rain (mm)
-- Annual Snow (cm)
+For both difficulty and enjoyment, the same procedure is run:
 
-##### MISCELLANEOUS #####
-- Route Type ('loop', 'out and back', or 'point to point')
-- Backpacking (whether the trail is known for overnight camping)
-- User (person providing the Difficulty and Enjoyment Rating)
-```
+1. **Data Stratification**
+
+   Before splitting the data into an 80% training set and a 20% test set, every trail is assigned to a bin based on its target value. Difficulty has enough trails at each category to stratify on those values directly. However, some low enjoyment categories have very few trails, so its bins are quantile-based to have a similar number of trails rather than the same range.
+
+   | Difficulty | Train | Test |
+   |---|---|---|
+   | 1 | 13 | 3 |
+   | 3 | 225 | 56 |
+   | 5 | 308 | 78 |
+   | 7 | 100 | 25 |
+   | **Total** | **646** | **162** |
+
+   | Enjoyment | Train | Test |
+   |---|---|---|
+   | 1-4 | 157 | 39 |
+   | 4.5 | 276 | 70 |
+   | 5 | 213 | 53 |
+   | **Total** | **646** | **162** |
+
+2. **Cross Validation**
+
+   The training data is further divided into 5 folds, built the same stratified way, and every candidate model below is compared on the same folds. The candidate models are:
+   - A baseline that predicts the mean
+   - Linear regression
+   - Random forest
+   - Gradient boosting
+
+   The candidates are either highly interpretable, like linear regression, or report a feature importance directly, like random forest and gradient boosting. The random forest and gradient boosting models are each tuned with a grid search.
+
+3. **Model Selection**
+
+   The candidate with the lowest cross-validated RMSE is selected and used to get the final test RMSE and R².
+
+## Results
+
+### Difficulty
+
+| Metric | Baseline | Linear Regression | Random Forest | Gradient Boosting |
+|---|---|---|---|---|
+| CV RMSE | 1.455 | 1.334 | 1.223 | 1.224 |
+| Train R² | 0.000 | 0.171 | 0.360 | 0.377 |
+
+**Best Model:** Random Forest
+
+**Test RMSE:** 1.141
+
+**Test R²:** 0.377
+
+**Feature Importance:** Distance: 0.07, Elevation Gain: 0.93
+
+**Verdict:** Distance and (especially) elevation gain are good predictors of trail difficulty.
+
+### Enjoyment
+
+| Metric | Baseline | Linear Regression | Random Forest | Gradient Boosting |
+|---|---|---|---|---|
+| CV RMSE | 0.501 | 0.496 | 0.491 | 0.491 |
+| Train R² | 0.000 | 0.036 | 0.138 | 0.118 |
+
+**Best Model:** Random Forest
+
+**Test RMSE:** 0.550
+
+**Test R²:** -0.056
+
+**Feature Importance:** Distance: 0.35, Elevation Gain: 0.65
+
+**Verdict:** Distance and elevation gain are terrible predictors of how enjoyable a trail is.
+
+## Plots
+
+**My trails**
+
+![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
+![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
+![Distance grouped by park](images/MyBackpackingTrails-GroupedbyPark.png)
+![Day counts by day of week and month](images/MyBackpackingTrails-GroupedbyDayofWeekandMonth.png)
+![Trail density by day of year](images/TrailDensityByDay.png)
+
+**USA backpacking trails**
+
+![Correlation heatmap](images/USABackpackingTrails-CorrelationHeatmap.png)
+![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
+![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
+
+**Predictions on my trails**
+
+![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyPredictedDifficulty.png)
 
 ## Project Structure
+
 ```
 MyTrails/
-├── MyTrails.ipnyb            # Analyse trail data and build the models
-├── dataSources/
-│   ├── alltrails-climate.csv # Climate data for USA National Park trails
-│   ├── alltrails-data.csv    # Other data for USA National Park trails
-│   ├── MyTrails.csv          # Data of personal completed hikes
-│   └── Shortlist.csv         # Data of personal trails of interest
-└── images/                   # Misc generated plots
+├── MyTrails.ipynb         # Clean & explore the data, train models, predict, visualize
+├── data/
+│   ├── MyTrails.csv       # My own completed backpacking trails
+│   └── alltrails-data.csv # USA national park trail dataset (AllTrails)
+├── images/                # Generated plots
+└── README.md
 ```
