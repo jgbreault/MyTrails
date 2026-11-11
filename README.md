@@ -12,14 +12,14 @@ MyTrails is a project exploring my personal backpacking statistics, featuring a 
 
 ## Plots
 
-![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
-![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
+![Elevation gain vs. distance, by number of days](images/MyBackpackingTrailsElevationGainvsDistanceGroupedbyNumberofDays.png)
+![Cumulative distance over time](images/MyBackpackingTrailsCumulativeDistance.png)
 ![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
-![Trail counts by day of week and month](images/MyBackpackingTrails-TrailCountsbyDayofWeekandMonth.png)
-![Trail density by day of year](images/MyBackpackingTrails-TrailCountsbyDayofYear.png)
-![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
-![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-TrailCountsbyDifficultyandEnjoyment.png)
-![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistancewithEstimatedDifficulty.png)
+![Trail counts by day of week and month](images/MyBackpackingTrailsTrailCountsbyDayofWeekandMonth.png)
+![Trail density by day of year](images/MyBackpackingTrailsTrailCountsbyDayofYear.png)
+![Elevation gain vs. distance, by difficulty](images/USABackpackingTrailsElevationGainvsDistanceGroupedbyDifficulty.png)
+![Trail counts by difficulty and enjoyment](images/USABackpackingTrailsTrailCountsbyDifficultyandEnjoyment.png)
+![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrailsElevationGainvsDistancewithEstimatedDifficulty.png)
 
 ## Machine Learning
 
