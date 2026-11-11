@@ -96,7 +96,7 @@ For both difficulty and enjoyment, the same procedure is run:
 
 **Feature Importance:** Difficulty: 0.35, Enjoyment: 0.65 
 
-**Verdict:** Distance and elevation gain are terrible predictors of how enjoyable a trail is.
+**Verdict:** Distance and elevation gain are terrible predictors of trail enjoyment.
 
 ## Project Structure
 
