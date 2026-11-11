@@ -6,7 +6,7 @@ MyTrails is a project exploring my personal backpacking statistics, with a super
 
 ![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
 ![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
-![Distance grouped by park](images/MyBackpackingTrails-GroupedbyPark.png)
+![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
 ![Day counts by day of week and month](images/MyBackpackingTrails-GroupedbyDayofWeekandMonth.png)
 ![Trail density by day of year](images/TrailDensityByDay.png)
 ![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
@@ -92,15 +92,9 @@ For both difficulty and enjoyment, the same procedure is run:
 | CV RMSE | 1.455 | 1.334 | 1.223 | 1.224 |
 | Train R² | 0.000 | 0.171 | 0.360 | 0.377 |
 
-**Best Model:** Random Forest
+**Best Model:** Random Forest (test RMSE: 1.141, test R²: 0.377)
 
-**Test RMSE:** 1.141
-
-**Test R²:** 0.377
-
-**Feature Importance:** Distance: 0.07, Elevation Gain: 0.93
-
-**Verdict:** Distance and (especially) elevation gain are good predictors of trail difficulty.
+**Verdict:** Distance and elevation gain are good predictors of trail difficulty.
 
 ### Enjoyment
 
@@ -109,13 +103,7 @@ For both difficulty and enjoyment, the same procedure is run:
 | CV RMSE | 0.501 | 0.496 | 0.491 | 0.491 |
 | Train R² | 0.000 | 0.036 | 0.138 | 0.118 |
 
-**Best Model:** Random Forest
-
-**Test RMSE:** 0.550
-
-**Test R²:** -0.056
-
-**Feature Importance:** Distance: 0.35, Elevation Gain: 0.65
+**Best Model:** Random Forest (test RMSE: 0.550, test R²: -0.056)
 
 **Verdict:** Distance and elevation gain are terrible predictors of how enjoyable a trail is.
 
