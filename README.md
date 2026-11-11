@@ -16,10 +16,10 @@ MyTrails is a project exploring my personal backpacking statistics, featuring a 
 ## Data
 
 - **`data/MyTrails.csv`**
-    — My 58 completed backpacking trails
+  - My 58 completed backpacking trails
 - **`data/alltrails-data.csv`**
-    - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
-    - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
+  - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
+  - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
 
 ## Machine Learning
 
