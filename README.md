@@ -16,10 +16,10 @@ MyTrails is a project exploring my personal backpacking statistics, featuring a 
 ## Data
 
 - **`data/MyTrails.csv`**
-  - My 58 completed backpacking trails
+    - My 58 completed backpacking trails
 - **`data/alltrails-data.csv`**
-  - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
-  - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
+    - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
+    - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
 
 ## Machine Learning
 
@@ -39,10 +39,7 @@ For both difficulty and enjoyment, the same procedure is run:
 
 1. **Data Stratification**
 
-   Before splitting the data into an 80% training set and a 20% test set, every trail is assigned to a bin based on its target value. Difficulty has enough trails at each category to stratify on those values directly. However, some low enjoyment categories have very few trails, so its bins are quantile-based to have a similar number of trails rather than the same range.
-
-    <div style="display: flex; gap: 40px; align-items: flex-start;">
-    <div>
+    Before splitting the data into an 80% training set and a 20% test set, every trail is assigned to a bin based on its target value. Difficulty has enough trails at each category to stratify on those values directly. However, some low enjoyment categories have very few trails, so its bins are quantile-based to have a similar number of trails rather than the same range.
         
     | Difficulty | Train | Test |
     |:---:|:---:|:---:|
@@ -51,9 +48,6 @@ For both difficulty and enjoyment, the same procedure is run:
     | 5 | 308 | 78 |
     | 7 | 100 | 25 |
     | **Total** | **646** | **162** |
-
-    </div>
-    <div>
         
     | Enjoyment | Train | Test |
     |:---:|:---:|:---:|
@@ -62,22 +56,19 @@ For both difficulty and enjoyment, the same procedure is run:
     | 5 | 213 | 53 |
     | **Total** | **646** | **162** |
 
-    </div>
-    </div>
-
 2. **Cross Validation**
 
-   The training data is further divided into 5 folds, built the same stratified way, and every candidate model below is compared on the same folds. The candidate models are:
-   - A baseline that predicts the mean
-   - Linear regression
-   - Random forest
-   - Gradient boosting
+    The training data is further divided into 5 folds, built the same stratified way, and every candidate model below is compared on the same folds. The candidate models are:
+    - A baseline that predicts the mean
+    - Linear regression
+    - Random forest
+    - Gradient boosting
 
-   The candidates are either highly interpretable, like linear regression, or report a feature importance directly, like random forest and gradient boosting. The random forest and gradient boosting models are each tuned with a grid search.
+    The candidates are either highly interpretable, like linear regression, or report a feature importance directly, like random forest and gradient boosting. The random forest and gradient boosting models are each tuned with a grid search.
 
 3. **Model Selection**
 
-   The candidate with the lowest cross-validated RMSE is selected and used to get the final test RMSE and R².
+    The candidate with the lowest cross-validated RMSE is selected and used to get the final test RMSE and R².
 
 ## Results
 
