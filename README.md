@@ -79,11 +79,11 @@ For both difficulty and enjoyment, the same procedure is run:
 | CV RMSE | 1.455 | 1.334 | 1.223 | 1.224 |
 | Train R² | 0.000 | 0.171 | 0.360 | 0.377 |
 
-**Best Model:** Random Forest (test RMSE: 1.141, test R²: 0.377)
+**<u>Best Model:</u>** Random Forest (test RMSE: 1.141, test R²: 0.377)
 
-**Feature Importance:** Difficulty: 0.07, Enjoyment: 0.93 
+**<u>Feature Importance:</u>** Difficulty: 0.07, Enjoyment: 0.93 
 
-**Verdict:** Distance and (especially) elevation gain are good predictors of trail difficulty.
+**<u>Verdict:</u>** Distance and (especially) elevation gain are good predictors of trail difficulty.
 
 ### Enjoyment
 
@@ -92,11 +92,11 @@ For both difficulty and enjoyment, the same procedure is run:
 | CV RMSE | 0.501 | 0.496 | 0.491 | 0.491 |
 | Train R² | 0.000 | 0.036 | 0.138 | 0.118 |
 
-**Best Model:** Random Forest (test RMSE: 0.550, test R²: -0.056)
+**<u>Best Model:</u>** Random Forest (test RMSE: 0.550, test R²: -0.056)
 
-**Feature Importance:** Difficulty: 0.35, Enjoyment: 0.65 
+**<u>Feature Importance:</u>** Difficulty: 0.35, Enjoyment: 0.65 
 
-**Verdict:** Distance and elevation gain are terrible predictors of trail enjoyment.
+**<u>Verdict:</u>** Distance and elevation gain are terrible predictors of trail enjoyment.
 
 ## Project Structure
 
