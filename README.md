@@ -14,7 +14,7 @@ MyTrails is a project exploring my personal backpacking statistics, featuring a 
 
 ![Elevation gain vs. distance by number of days](images/MyBackpackingTrailsElevationGainvsDistancebyNumberofDays.png)
 ![Cumulative distance](images/MyBackpackingTrailsCumulativeDistance.png)
-![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
+![Distance grouped by park](images/MyBackpackingTrailsDistanceGroupedbyPark.png)
 ![Trail counts by day of week and month](images/MyBackpackingTrailsTrailCountsbyDayofWeekandMonth.png)
 ![Trail counts grouped by day of year](images/MyBackpackingTrailsTrailCountsGroupedbyDayofYear.png)
 ![Elevation gain vs. distance by difficulty](images/USABackpackingTrailsElevationGainvsDistancebyDifficulty.png)
