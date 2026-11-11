@@ -35,6 +35,8 @@ MyTrails is a project exploring my personal backpacking statistics, with a super
 
 Multicollinearity is considered. Distance and elevation gain have a correlation of 0.87 and a VIF of 3.99, comfortably under the standard threshold of 5–10.
 
+Feature scaling is not needed since none of the candidate models are sensitive to feature magnitude.
+
 For both difficulty and enjoyment, the same procedure is run:
 
 1. **Data Stratification**
