@@ -6,13 +6,12 @@ MyTrails is a project exploring my personal backpacking statistics, with a super
 
 ![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
 ![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
-![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
+![Distance grouped by park](images/MyBackpackingTrails-GroupedbyPark.png)
 ![Day counts by day of week and month](images/MyBackpackingTrails-GroupedbyDayofWeekandMonth.png)
 ![Trail density by day of year](images/TrailDensityByDay.png)
-![Correlation heatmap](images/USABackpackingTrails-CorrelationHeatmap.png)
 ![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
 ![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
-![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyPredictedDifficulty.png)
+![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyEstimatedDifficulty.png)
 
 ## Machine Learning
 
