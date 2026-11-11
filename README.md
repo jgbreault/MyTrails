@@ -1,38 +1,25 @@
 # MyTrails
 
-MyTrails is a project exploring my personal backpacking statistics, with a supervised-learning experiment testing if a trail's distance and elevation gain are good predictors of its difficulty and how enjoyable it is.
+MyTrails is a project exploring my personal backpacking statistics, with a supervised learning experiment to test whether a trail's distance and elevation gain are good predictors of its difficulty and enjoyment.
 
 ## Plots
 
 ![Elevation gain vs. distance, by number of days](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyNumberofDays.png)
 ![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
 ![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
-![Day counts by day of week and month](images/MyBackpackingTrails-GroupedbyDayofWeekandMonth.png)
+![Trail counts by day of week and month](images/MyBackpackingTrails-TrailCountsbyDayofWeekandMonth.png)
 ![Trail density by day of year](images/TrailDensityByDay.png)
 ![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
-![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
+![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-TrailCountsbyDifficultyandEnjoyment.png)
 ![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistancewithEstimatedDifficulty.png)
 
 ## Data
 
-- **`data/MyTrails.csv`** — my 58 completed backpacking trails:
-    - trail name
-    - distance
-    - elevation gain
-    - park
-    - province
-    - country
-    - start date
-    - end date
-- **`data/alltrails-data.csv`** — all 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails:
-    - trail name
-    - distance
-    - elevation gain
-    - difficulty (1-7 scale)
-    - enjoyment (1-5 scale)
-    - activities
-        - Used to get subsets of 3,001 hiking trails and 808 backpacking trails
-        - The backpacking subset is used for training since I only estimate the difficulty and enjoyment of backpacking trails
+- **`data/MyTrails.csv`**
+    — My 58 completed backpacking trails
+- **`data/alltrails-data.csv`**
+    - All 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails
+    - Filtered down to 808 backpacking trails for training since I am only interested in backpacking trails
 
 ## Machine Learning
 
@@ -54,20 +41,29 @@ For both difficulty and enjoyment, the same procedure is run:
 
    Before splitting the data into an 80% training set and a 20% test set, every trail is assigned to a bin based on its target value. Difficulty has enough trails at each category to stratify on those values directly. However, some low enjoyment categories have very few trails, so its bins are quantile-based to have a similar number of trails rather than the same range.
 
-   | Difficulty | Train | Test |
-   |---|---|---|
-   | 1 | 13 | 3 |
-   | 3 | 225 | 56 |
-   | 5 | 308 | 78 |
-   | 7 | 100 | 25 |
-   | **Total** | **646** | **162** |
+    <div style="display: flex; gap: 40px; align-items: flex-start;">
+    <div>
+        
+    | Difficulty | Train | Test |
+    |:---:|:---:|:---:|
+    | 1 | 13 | 3 |
+    | 3 | 225 | 56 |
+    | 5 | 308 | 78 |
+    | 7 | 100 | 25 |
+    | **Total** | **646** | **162** |
 
-   | Enjoyment | Train | Test |
-   |---|---|---|
-   | 1-4 | 157 | 39 |
-   | 4.5 | 276 | 70 |
-   | 5 | 213 | 53 |
-   | **Total** | **646** | **162** |
+    </div>
+    <div>
+        
+    | Enjoyment | Train | Test |
+    |:---:|:---:|:---:|
+    | 1–4 | 157 | 39 |
+    | 4.5 | 276 | 70 |
+    | 5 | 213 | 53 |
+    | **Total** | **646** | **162** |
+
+    </div>
+    </div>
 
 2. **Cross Validation**
 
@@ -87,23 +83,25 @@ For both difficulty and enjoyment, the same procedure is run:
 
 ### Difficulty
 
-| Metric | Baseline | Linear Regression | Random Forest | Gradient Boosting |
+| | Baseline | Linear Regression | Random Forest | Gradient Boosting |
 |---|---|---|---|---|
 | CV RMSE | 1.455 | 1.334 | 1.223 | 1.224 |
 | Train R² | 0.000 | 0.171 | 0.360 | 0.377 |
 
 **Best Model:** Random Forest (test RMSE: 1.141, test R²: 0.377)
+**Feature Importance:** Difficulty: 0.07, Enjoyment: 0.93 
 
 **Verdict:** Distance and elevation gain are good predictors of trail difficulty.
 
 ### Enjoyment
 
-| Metric | Baseline | Linear Regression | Random Forest | Gradient Boosting |
+| | Baseline | Linear Regression | Random Forest | Gradient Boosting |
 |---|---|---|---|---|
 | CV RMSE | 0.501 | 0.496 | 0.491 | 0.491 |
 | Train R² | 0.000 | 0.036 | 0.138 | 0.118 |
 
 **Best Model:** Random Forest (test RMSE: 0.550, test R²: -0.056)
+**Feature Importance:** Difficulty: 0.35, Enjoyment: 0.65 
 
 **Verdict:** Distance and elevation gain are terrible predictors of how enjoyable a trail is.
 
