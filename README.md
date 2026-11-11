@@ -16,7 +16,7 @@ MyTrails is a project exploring my personal backpacking statistics, featuring a 
 ![Cumulative distance over time](images/MyBackpackingTrails-CumulativeDistance.png)
 ![Distance grouped by park](images/MyBackpackingTrails-DistanceGroupedbyPark.png)
 ![Trail counts by day of week and month](images/MyBackpackingTrails-TrailCountsbyDayofWeekandMonth.png)
-![Trail density by day of year](images/TrailDensityByDay.png)
+![Trail density by day of year](images/MyBackpackingTrails-TrailCountsbyDayofYear.png)
 ![Elevation gain vs. distance, by difficulty](images/USABackpackingTrails-ElevationGainvsDistanceGroupedbyDifficulty.png)
 ![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-TrailCountsbyDifficultyandEnjoyment.png)
 ![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistancewithEstimatedDifficulty.png)
@@ -81,7 +81,7 @@ For both difficulty and enjoyment, the same procedure is run:
 
 **Best Model:** Random Forest (test RMSE: 1.141, test R²: 0.377)
 
-**Feature Importance:** Difficulty: 0.07, Enjoyment: 0.93 
+**Feature Importance:** Distance: 0.07, Elevation Gain: 0.93
 
 **Verdict:** Distance and (especially) elevation gain are good predictors of trail difficulty.
 
@@ -94,7 +94,7 @@ For both difficulty and enjoyment, the same procedure is run:
 
 **Best Model:** Random Forest (Test RMSE: 0.550, Test R²: -0.056)
 
-**Feature Importance:** Difficulty: 0.35, Enjoyment: 0.65 
+**Feature Importance:** Distance: 0.35, Elevation Gain: 0.65
 
 **Verdict:** Distance and elevation gain are terrible predictors of trail enjoyment.
 
