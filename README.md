@@ -13,6 +13,27 @@ MyTrails is a project exploring my personal backpacking statistics, with a super
 ![Trail counts by difficulty and enjoyment](images/USABackpackingTrails-GroupedbyDifficultyandEnjoyment.png)
 ![Elevation gain vs. distance, by predicted difficulty](images/MyBackpackingTrails-ElevationGainvsDistanceGroupedbyEstimatedDifficulty.png)
 
+## Data
+
+- **`data/MyTrails.csv`** — my 58 completed backpacking trails:
+    - trail name
+    - distance
+    - elevation gain
+    - park
+    - province
+    - country
+    - start date
+    - end date
+- **`data/alltrails-data.csv`** — all 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails:
+    - trail name
+    - distance
+    - elevation gain
+    - difficulty (1-7 scale)
+    - enjoyment (1-5 scale)
+    - activities
+        - Used to get subsets of 3,001 hiking trails and 808 backpacking trails
+        - The backpacking subset is used for training since I only estimate the difficulty and enjoyment of backpacking trails
+
 ## Machine Learning
 
 **Features:**
@@ -61,27 +82,6 @@ For both difficulty and enjoyment, the same procedure is run:
 3. **Model Selection**
 
    The candidate with the lowest cross-validated RMSE is selected and used to get the final test RMSE and R².
-
-## Data
-
-- **`data/MyTrails.csv`** — my 58 completed backpacking trails:
-    - trail name
-    - distance
-    - elevation gain
-    - park
-    - province
-    - country
-    - start date
-    - end date
-- **`data/alltrails-data.csv`** — all 3,195 trails in USA national parks, a Kaggle dataset (no longer available) originally scraped from AllTrails:
-    - trail name
-    - distance
-    - elevation gain
-    - difficulty (1-7 scale)
-    - enjoyment (1-5 scale)
-    - activities
-        - Used to get subsets of 3,001 hiking trails and 808 backpacking trails
-        - The backpacking subset is used for training since I only estimate the difficulty and enjoyment of backpacking trails
 
 ## Results
 
